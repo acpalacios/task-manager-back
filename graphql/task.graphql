@@ -1,0 +1,23 @@
+enum TaskStatus {
+    CREATED @enum(value: "created")
+    STARTED @enum(value: "created")
+    INPROGRESS @enum(value: "in-progress")
+    COMPLETED @enum(value: "completed")
+}
+
+type Task {
+    id: ID!
+    name: String!
+    description: String!
+    status: TaskStatus!
+    created_at: DateTime!
+    updated_at: DateTime!
+    user_id: ID!
+}
+
+input TaskInput {
+    name: String!
+    description: String!
+    status: TaskStatus!
+    user_id: ID!
+}
