@@ -12,6 +12,7 @@ type Task {
     status: TaskStatus!
     created_at: DateTime!
     updated_at: DateTime!
+    user: User! @belongsTo
     user_id: ID!
 }
 
