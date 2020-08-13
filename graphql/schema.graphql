@@ -1,0 +1,16 @@
+#import task.graphql
+#import user.graphql
+
+type Query {
+    users: [User!]! @all
+    user(id: ID @eq): User @find
+    tasks: [Task!]! @all
+    task(id: ID @eq): Task @find
+}
+
+type Mutation {
+    createUser(input: UserInput! @spread): User @create
+    createTask(input: TaskInput! @spread): Task @create
+    updateTask(id: ID!, input: TaskInput! @spread): Task @update
+    deleteTask(id: ID!): Task @delete
+}
