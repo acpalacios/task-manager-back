@@ -1,6 +1,6 @@
 enum TaskStatus {
     CREATED @enum(value: "created")
-    STARTED @enum(value: "created")
+    STARTED @enum(value: "started")
     INPROGRESS @enum(value: "in-progress")
     COMPLETED @enum(value: "completed")
 }
